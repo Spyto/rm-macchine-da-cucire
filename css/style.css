@@ -11,6 +11,7 @@ body {
     line-height: 1.7;
 }
 
+
 a {
     text-decoration: none;
 }
@@ -23,6 +24,38 @@ nav {
     opacity: 0;
     transform: translateY(-20px);
     pointer-events: none;
+}
+
+/* TITOLO */
+.hero-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hero-logo-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.hero-rm {
+    font-size: 6rem;
+    color: #b38a3d;
+    font-weight: normal;
+    line-height: 1;
+}
+
+.hero-machine {
+    height: 100px;
+    width: auto;
+}
+
+.hero-logo-bottom {
+    margin-top: 10px;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    color: #4b4038;
 }
 
 
@@ -75,6 +108,10 @@ nav {
         }
 
 /* HERO */
+
+.hero-box {
+    background: #f1eee8;
+}
 
 .hero {
     text-align: center;
@@ -179,6 +216,27 @@ nav {
 
 .promo-banner {
     max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+    .promo-banner img {
+        width: 100%;
+        display: none;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0,0,0,.10);
+    }
+
+        .promo-banner img.active {
+            display: block;
+        }
+
+.promo-box {
+    padding:5px;
+}
+
+/*.promo-banner {
+    max-width: 1200px;
     margin: 0px auto;
     padding: 0 0px;
 }
@@ -188,7 +246,7 @@ nav {
         display: block;
         border-radius: 0px;
         box-shadow: 0 8px 20px rgba(0,0,0,.10);
-    }
+    }*/
 /* SEZIONI */
 
 .section-box {
@@ -366,14 +424,17 @@ footer {
 
 @media(max-width:768px) {
 
+    /* HEADER */
+
     .header-container {
         position: relative;
         justify-content: space-between;
         align-items: center;
+        padding: 10px 15px;
     }
 
     .logo {
-        height: 55px;
+        height: 50px;
         margin: 0;
     }
 
@@ -381,14 +442,16 @@ footer {
         display: block;
         font-size: 2rem;
         cursor: pointer;
-        padding: 10px;
+        padding: 5px 10px;
     }
+
+    /* MENU */
 
     nav {
         display: none;
         position: absolute;
-        top: 85px;
-        right: 20px;
+        top: 70px;
+        right: 15px;
         width: 180px;
         background: white;
         border-radius: 15px;
@@ -415,4 +478,97 @@ footer {
             nav a:last-child {
                 border-bottom: none;
             }
+
+    /* HERO */
+
+    .hero-box {
+        padding: 25px 20px;
+    }
+
+        .hero-box h1 {
+            font-size: 2rem;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+    .hero-slogan {
+        font-size: 1rem;
+        margin: 10px auto 15px auto;
+    }
+
+    /* BOTTONI */
+
+    .button-container {
+        margin-top: 15px;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: .95rem;
+    }
+
+    /* BOX */
+
+    .section-box {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    .contact-section {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    /* PROMO */
+
+    .promo-box {
+        margin: 15px;
+        padding: 10px;
+    }
+
+    .promo-banner {
+        margin: 0;
+    }
+
+        .promo-banner img {
+            border-radius: 12px;
+        }
+
+    /* CHI SIAMO */
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about-right {
+        padding: 20px;
+    }
+
+    /* SERVIZI */
+
+    .service-card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* MARCHI */
+
+    .brand-logos {
+        gap: 20px;
+    }
+
+        .brand-logos img {
+            max-width: 100px;
+            max-height: 60px;
+        }
+
+    /* WHATSAPP FISSO */
+
+    .whatsapp-float {
+        right: 10px;
+        bottom: 10px;
+        padding: 10px 15px;
+        font-size: .9rem;
+    }
 }
