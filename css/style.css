@@ -1,0 +1,434 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Georgia, serif;
+    background:#f8f4ec;
+    color:#4b4038;
+    line-height:1.7;
+}
+
+a{
+    text-decoration:none;
+}
+
+nav{
+
+    transition:all .3s ease;
+
+}
+
+.header-hidden{
+
+    opacity:0;
+
+    transform:translateY(-20px);
+
+    pointer-events:none;
+
+}
+
+
+/* HEADER */
+
+header{
+    background:#f8f4ec;
+    border-bottom:1px solid #ddd2c0;
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+.header-container{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    padding:15px 20px;
+}
+
+.logo{
+    height:75px;
+    width:auto;
+    margin-right:40px;
+}
+
+.menu-toggle{
+
+    display:none;
+
+}
+
+nav{
+
+    display:flex;
+
+    gap:35px;
+
+    margin-left:30px;
+
+}
+
+nav a{
+    color:#4b4038;
+    font-size:1rem;
+    font-weight:600;
+    padding:8px 12px;
+    border-radius:6px;
+    transition:.3s;
+}
+
+nav a:hover{
+    background:#efe7da;
+    color:#8b6a3d;
+}
+
+/* HERO */
+
+.hero{
+    text-align:center;
+    padding:60px 20px;
+    background:#f8f4ec;
+}
+
+.hero h1{
+    font-size:3.2rem;
+    color:#4b4038;
+}
+
+.hero h3{
+    color:#8b6a3d;
+    font-style:italic;
+    margin-top:5px;
+    margin-bottom:20px;
+}
+
+.hero h2{
+    color:#8b6a3d;
+    margin-bottom:20px;
+    font-size:1.8rem;
+}
+
+.hero p{
+    max-width:800px;
+    margin:auto;
+}
+
+.hero-box{
+    text-align:center;
+}
+
+.hero-box h1{
+    font-size:3.5rem;
+    color:#4b4038;
+    margin-bottom:20px;
+}
+
+.hero-box h2{
+    color:#a37c3f;
+    font-size:2rem;
+    margin-bottom:25px;
+}
+
+.hero-slogan{
+    font-size:1.3rem;
+    max-width:900px;
+    margin:15px auto 25px auto;
+    text-align:center !important;
+}
+
+.section-box.hero-box{
+    margin-top:25px;
+}
+
+@media(max-width:768px){
+
+    .hero-box h1{
+        font-size:2rem;
+    }
+
+    .hero-box h2{
+        font-size:1.3rem;
+    }
+
+    .hero-slogan{
+        font-size:1rem;
+    }
+
+}
+
+/* BUTTON */
+
+.button-container{
+    margin-top:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    border-radius:40px;
+    margin:8px;
+    color:white;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.btn-phone{
+    background:#8b6a3d;
+}
+
+.btn-whatsapp{
+    background:#25D366;
+}
+
+/* SLIDER PROMO */
+
+.promo-banner{
+    max-width:1200px;
+    margin:0px auto;
+    padding:0 0px;
+}
+
+.promo-banner img{
+    width:100%;
+    display:block;
+    border-radius:0px;
+    box-shadow:0 8px 20px rgba(0,0,0,.10);
+}
+/* SEZIONI */
+
+.section-box{
+    max-width:1200px;
+    margin:40px auto;
+    background:white;
+    border-radius:20px;
+    padding:50px;
+    box-shadow:0 3px 15px rgba(0,0,0,.06);
+}
+
+.section-box h2{
+    color:#4b4038;
+    font-size:2.2rem;
+    margin-bottom:30px;
+}
+
+.section-box h2::after{
+    content:'';
+    display:block;
+    width:80px;
+    height:4px;
+    background:#b38a3d;
+    margin-top:10px;
+    border-radius:5px;
+}
+
+.section-box p{
+    text-align:left;
+}
+
+/* SERVIZI */
+
+.services{
+    display:flex;
+    flex-wrap:wrap;
+    gap:25px;
+    justify-content:center;
+}
+
+.service-card{
+    background:#faf8f4;
+    width:320px;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    border:1px solid #eee;
+}
+
+.service-card h3{
+    color:#8b6a3d;
+    margin-bottom:15px;
+}
+
+/* MARCHI */
+
+.brand-logos{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+}
+
+.brand-logos img{
+    max-width:150px;
+    max-height:80px;
+    object-fit:contain;
+}
+
+/* CONTATTI */
+
+.contact-section{
+    max-width:1200px;
+    margin:40px auto;
+    background:white;
+    border-radius:20px;
+    padding:50px;
+    box-shadow:0 3px 15px rgba(0,0,0,.06);
+}
+
+.contact-section h2{
+    font-size:2.2rem;
+    margin-bottom:20px;
+}
+
+.contact-section h2::after{
+    content:'';
+    display:block;
+    width:80px;
+    height:4px;
+    background:#b38a3d;
+    margin-top:10px;
+    border-radius:5px;
+}
+
+.contact-section p{
+    margin-bottom:10px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#4b4038;
+    color:white;
+    text-align:center;
+    padding:40px;
+    margin-top:40px;
+}
+
+/* WHATSAPP */
+
+.whatsapp-float{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#25D366;
+    color:white;
+    padding:15px 20px;
+    border-radius:50px;
+    font-weight:bold;
+    box-shadow:0 4px 15px rgba(0,0,0,.3);
+    z-index:9999;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:40px;
+    align-items:start;
+}
+
+.about-right{
+    background:#faf8f4;
+    padding:30px;
+    border-radius:15px;
+    border:1px solid #eee;
+}
+
+.about-right h3{
+    color:#8b6a3d;
+    margin-bottom:20px;
+}
+
+.about-right ul{
+    list-style:none;
+    padding:0;
+}
+
+.about-right li{
+    margin-bottom:15px;
+    font-size:1rem;
+}
+
+@media(max-width:768px){
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* MENU HAMBURGER */
+
+.menu-toggle{
+    display:none;
+    font-size:2rem;
+    cursor:pointer;
+    color:#4b4038;
+    padding:10px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .header-container{
+        position:relative;
+        justify-content:space-between;
+        align-items:center;
+    }
+
+    .logo{
+        height:55px;
+        margin:0;
+    }
+
+    .menu-toggle{
+        display:block;
+        font-size:2rem;
+        cursor:pointer;
+        padding:10px;
+    }
+
+    nav{
+    display:none;
+    position:absolute;
+    top:85px;
+    right:20px;
+    width:180px;
+
+    background:white;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+
+    opacity:0;
+    transform:translateY(-10px);
+    transition:.25s;
+
+    margin-left:0;
+    }
+
+    nav.show{
+        display:flex;
+        flex-direction:column;
+
+        opacity:1;
+        transform:translateY(0);
+    }
+
+    nav a{
+        padding:12px 20px;
+        text-align:left;
+        border-bottom:1px solid #eee;
+    }
+
+    nav a:last-child{
+        border-bottom:none;
+    }
+}
