@@ -11,47 +11,12 @@ body {
     line-height: 1.7;
 }
 
-
 a {
     text-decoration: none;
 }
 
-nav {
-    transition: all .3s ease;
-}
 
-.header-hidden {
-    opacity: 0;
-    transform: translateY(-20px);
-    pointer-events: none;
-}
-
-/* TITOLO */
-.hero-logo {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-}
-
-.hero-logo-top {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-}
-
-.hero-machine {
-    height: 100px;
-    width: auto;
-}
-
-
-
-
-/* HEADER */
+/* ===== HEADER ===== */
 
 header {
     background: #f8f4ec;
@@ -75,10 +40,21 @@ header {
     margin-right: 40px;
 }
 
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #4b4038;
+    padding: 10px;
+    background: none;
+    border: none;
+}
+
 nav {
     display: flex;
     gap: 35px;
     margin-left: 30px;
+    transition: all .3s ease;
 }
 
     nav a {
@@ -96,7 +72,8 @@ nav {
         }
 
 
-/* HERO */
+/* ===== HERO ===== */
+
 .hero-box {
     background: white;
     text-align: center;
@@ -108,6 +85,8 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 30px;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 .hero-rm {
@@ -120,19 +99,19 @@ nav {
 .hero-text {
     display: flex;
     flex-direction: column;
-    align-items: center !important;
+    align-items: flex-start;
 }
 
 .hero-logo-bottom {
     font-size: 4rem;
     line-height: 0.95;
     color: #4b4038;
-    text-align: center;
+    text-align: left;
 }
 
 .hero-owner {
     width: 100%;
-    text-align: center;
+    text-align: right;
     margin-top: 8px;
     font-style: italic;
     font-size: 1.1rem;
@@ -168,102 +147,7 @@ nav {
 }
 
 
-
-@media(max-width:768px) {
-
-    .hero-logo-row {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .hero-rm {
-        font-size: 5rem;
-    }
-
-    .hero-logo-bottom {
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    .hero-text {
-        align-items: center;
-    }
-
-    .hero-owner {
-        text-align: center;
-        font-size: 1rem;
-    }
-
-    .hero-box {
-        padding: 25px;
-    }
-}
-
-
-/* BUTTON */
-
-.button-container {
-    margin-top: 30px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 14px 28px;
-    border-radius: 40px;
-    margin: 8px;
-    color: white;
-    font-weight: bold;
-    transition: .3s;
-}
-
-    .btn:hover {
-        transform: translateY(-2px);
-    }
-
-.btn-phone {
-    background: #8b6a3d;
-}
-
-.btn-whatsapp {
-    background: #25D366;
-}
-
-/* SLIDER PROMO */
-
-.promo-banner {
-    max-width: 1200px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-    .promo-banner img {
-        width: 100%;
-        display: none;
-        border-radius: 10px;
-        box-shadow: 0 8px 20px rgba(0,0,0,.10);
-    }
-
-        .promo-banner img.active {
-            display: block;
-        }
-
-.promo-box {
-    padding:5px;
-}
-
-/*.promo-banner {
-    max-width: 1200px;
-    margin: 0px auto;
-    padding: 0 0px;
-}
-
-    .promo-banner img {
-        width: 100%;
-        display: block;
-        border-radius: 0px;
-        box-shadow: 0 8px 20px rgba(0,0,0,.10);
-    }*/
-/* SEZIONI */
+/* ===== SEZIONI ===== */
 
 .section-box {
     max-width: 1200px;
@@ -294,140 +178,8 @@ nav {
         text-align: left;
     }
 
-/* SERVIZI */
 
-.services {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    justify-content: center;
-}
-
-.service-card {
-    background: #faf8f4;
-    width: 320px;
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
-    border: 1px solid #eee;
-}
-
-    .service-card h3 {
-        color: #8b6a3d;
-        margin-bottom: 15px;
-    }
-
-/* MARCHI */
-
-.brand-logos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-}
-
-    .brand-logos img {
-        max-width: 150px;
-        max-height: 80px;
-        object-fit: contain;
-    }
-
-/* CONTATTI */
-
-.contact-section {
-    max-width: 1200px;
-    margin: 40px auto;
-    background: white;
-    border-radius: 20px;
-    padding: 50px;
-    box-shadow: 0 3px 15px rgba(0,0,0,.06);
-}
-
-    .contact-section h2 {
-        font-size: 2.2rem;
-        margin-bottom: 20px;
-    }
-
-        .contact-section h2::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: #b38a3d;
-            margin-top: 10px;
-            border-radius: 5px;
-        }
-
-    .contact-section p {
-        margin-bottom: 10px;
-    }
-
-/* CARD DOVE TROVARCI */
-.location-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 40px;
-    align-items: start;
-}
-
-.location-map iframe {
-    border-radius: 15px;
-}
-
-.location-info p {
-    margin-bottom: 5px;
-}
-
-@media(max-width:768px) {
-
-    .location-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-}
-
-/* FOOTER */
-
-footer {
-    background: #4b4038;
-    color: white;
-    text-align: center;
-    padding: 40px;
-    margin-top: 40px;
-}
-
-.footer-line {
-    width: 250px;
-    margin: 20px auto;
-    border: none;
-    border-top: 1px solid rgba(255,255,255,.25);
-}
-
-.footer-mini {
-    background: #f1eee8;
-    border-top: 1px solid #ddd2c0;
-    color: #666;
-    text-align: center;
-    padding: 15px;
-    font-size: .85rem;
-    margin-top: 30px;
-}
-
-/* WHATSAPP */
-
-.whatsapp-float {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    background: #25D366;
-    color: white;
-    padding: 15px 20px;
-    border-radius: 50px;
-    font-weight: bold;
-    box-shadow: 0 4px 15px rgba(0,0,0,.3);
-    z-index: 9999;
-}
+/* ===== CHI SIAMO ===== */
 
 .about-grid {
     display: grid;
@@ -458,31 +210,153 @@ footer {
         font-size: 1rem;
     }
 
-@media(max-width:768px) {
 
-    .about-grid {
-        grid-template-columns: 1fr;
+/* ===== SERVIZI ===== */
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.service-card {
+    background: #faf8f4;
+    width: 320px;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+    .service-card h3 {
+        color: #8b6a3d;
+        margin-bottom: 15px;
     }
+
+
+/* ===== MARCHI ===== */
+
+.brand-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
 }
 
-/* MENU HAMBURGER */
+    .brand-logos img {
+        max-width: 150px;
+        max-height: 80px;
+        object-fit: contain;
+    }
 
-.menu-toggle {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: #4b4038;
-    padding: 10px;
-    background: none;
-    border: none;
+
+/* ===== CONTATTI ===== */
+
+.location-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: start;
 }
 
-/* MOBILE */
+.location-map iframe {
+    border-radius: 15px;
+}
 
-@media(max-width:768px) {
+.location-info p {
+    margin-bottom: 5px;
+}
 
-    /* HEADER */
 
+/* ===== BOTTONI ===== */
+
+.button-container {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 40px;
+    margin: 8px;
+    color: white;
+    font-weight: bold;
+    transition: .3s;
+}
+
+    .btn:hover {
+        transform: translateY(-2px);
+    }
+
+.btn-phone {
+    background: #8b6a3d;
+}
+
+.btn-whatsapp {
+    background: #25D366;
+}
+
+
+/* ===== SLIDER PROMO ===== */
+
+.promo-box {
+    padding: 5px;
+}
+
+.promo-banner {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+    .promo-banner img {
+        width: 100%;
+        display: none;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0,0,0,.10);
+    }
+
+        .promo-banner img.active {
+            display: block;
+        }
+
+
+/* ===== FOOTER ===== */
+
+.footer-mini {
+    background: #f1eee8;
+    border-top: 1px solid #ddd2c0;
+    color: #666;
+    text-align: center;
+    padding: 15px;
+    font-size: .85rem;
+    margin-top: 30px;
+}
+
+
+/* ===== WHATSAPP FISSO ===== */
+
+.whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,.3);
+    z-index: 9999;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px) {
+
+    /* Header */
     .header-container {
         position: relative;
         justify-content: space-between;
@@ -497,13 +371,10 @@ footer {
 
     .menu-toggle {
         display: block;
-        font-size: 2rem;
-        cursor: pointer;
         padding: 5px 10px;
     }
 
-    /* MENU */
-
+    /* Menu */
     nav {
         display: none;
         position: absolute;
@@ -517,11 +388,11 @@ footer {
         transform: translateY(-10px);
         transition: .25s;
         margin-left: 0;
+        flex-direction: column;
     }
 
         nav.show {
             display: flex;
-            flex-direction: column;
             opacity: 1;
             transform: translateY(0);
         }
@@ -536,7 +407,7 @@ footer {
                 border-bottom: none;
             }
 
-    /* HERO MOBILE */
+    /* Hero */
     .hero-box {
         padding: 30px 20px;
     }
@@ -561,7 +432,6 @@ footer {
 
     .hero-owner {
         text-align: center;
-        width: 100%;
         font-size: 0.95rem;
     }
 
@@ -572,14 +442,47 @@ footer {
 
     .hero-slogan {
         font-size: 1rem;
-        text-align: center !important;
-        width: 100%;
     }
-    
 
+    /* Sezioni */
+    .section-box {
+        margin: 15px;
+        padding: 20px;
+    }
 
-    /* BOTTONI */
+    /* Chi siamo */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 
+    .about-right {
+        padding: 20px;
+    }
+
+    /* Servizi */
+    .service-card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* Marchi */
+    .brand-logos {
+        gap: 20px;
+    }
+
+        .brand-logos img {
+            max-width: 100px;
+            max-height: 60px;
+        }
+
+    /* Contatti */
+    .location-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Bottoni */
     .button-container {
         margin-top: 15px;
     }
@@ -589,20 +492,7 @@ footer {
         font-size: .95rem;
     }
 
-    /* BOX */
-
-    .section-box {
-        margin: 15px;
-        padding: 20px;
-    }
-
-    .contact-section {
-        margin: 15px;
-        padding: 20px;
-    }
-
-    /* PROMO */
-
+    /* Promo */
     .promo-box {
         margin: 15px;
         padding: 10px;
@@ -616,37 +506,7 @@ footer {
             border-radius: 12px;
         }
 
-    /* CHI SIAMO */
-
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .about-right {
-        padding: 20px;
-    }
-
-    /* SERVIZI */
-
-    .service-card {
-        width: 100%;
-        padding: 20px;
-    }
-
-    /* MARCHI */
-
-    .brand-logos {
-        gap: 20px;
-    }
-
-        .brand-logos img {
-            max-width: 100px;
-            max-height: 60px;
-        }
-
-    /* WHATSAPP FISSO */
-
+    /* WhatsApp */
     .whatsapp-float {
         right: 10px;
         bottom: 10px;
