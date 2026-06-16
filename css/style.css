@@ -75,10 +75,6 @@ header {
     margin-right: 40px;
 }
 
-.menu-toggle {
-    display: none;
-}
-
 nav {
     display: flex;
     gap: 35px;
@@ -101,24 +97,22 @@ nav {
 
 
 /* HERO */
-
 .hero-box {
-    background: #f1eee8;
+    background: white;
     text-align: center;
-    padding: 40px;
+    padding: 60px 80px;
 }
-
 
 .hero-logo-row {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
 }
 
 .hero-rm {
-    font-size: 8rem;
-    line-height: 0.9;
+    font-size: 9rem;
+    line-height: 1;
     color: #c49a3a;
     font-family: Georgia, serif;
 }
@@ -126,31 +120,51 @@ nav {
 .hero-text {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center !important;
 }
 
 .hero-logo-bottom {
-    font-size: 3.6rem;
+    font-size: 4rem;
     line-height: 0.95;
     color: #4b4038;
-    text-align: left;
+    text-align: center;
 }
 
 .hero-owner {
     width: 100%;
-    text-align: right;
-    margin-top: 10px;
+    text-align: center;
+    margin-top: 8px;
     font-style: italic;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #b38a3d;
 }
 
+.hero-divider {
+    color: #c49a3a;
+    font-size: 1.4rem;
+    margin: 25px auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+    .hero-divider::before,
+    .hero-divider::after {
+        content: '';
+        display: block;
+        width: 120px;
+        height: 1px;
+        background: #c49a3a;
+        opacity: 0.5;
+    }
+
 .hero-slogan {
-    margin-top: 35px;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     color: #4b4038;
     text-align: center !important;
     width: 100%;
+    margin-top: 0;
 }
 
 
@@ -523,45 +537,46 @@ footer {
             }
 
     /* HERO MOBILE */
-
     .hero-box {
-        padding: 25px 15px;
+        padding: 30px 20px;
     }
 
     .hero-logo-row {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
+        flex-direction: column;
+        gap: 10px;
     }
 
     .hero-rm {
-        font-size: 4rem;
-        line-height: 1;
+        font-size: 5rem;
     }
 
     .hero-text {
-        align-items: flex-start;
+        align-items: center;
     }
 
     .hero-logo-bottom {
-        font-size: 1.5rem;
-        line-height: 1;
-        text-align: left;
+        font-size: 2rem;
+        text-align: center;
     }
 
     .hero-owner {
-        width: auto;
-        text-align: right;
-        font-size: 0.8rem;
-        margin-top: 3px;
+        text-align: center;
+        width: 100%;
+        font-size: 0.95rem;
+    }
+
+    .hero-divider::before,
+    .hero-divider::after {
+        width: 50px;
     }
 
     .hero-slogan {
         font-size: 1rem;
-        margin-top: 20px;
         text-align: center !important;
+        width: 100%;
     }
+    
+
 
     /* BOTTONI */
 
