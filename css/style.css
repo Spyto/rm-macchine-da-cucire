@@ -351,6 +351,30 @@ nav {
         margin-bottom: 10px;
     }
 
+/* CARD DOVE TROVARCI */
+.location-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.location-map iframe {
+    border-radius: 15px;
+}
+
+.location-info p {
+    margin-bottom: 5px;
+}
+
+@media(max-width:768px) {
+
+    .location-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
 /* FOOTER */
 
 footer {
@@ -359,6 +383,23 @@ footer {
     text-align: center;
     padding: 40px;
     margin-top: 40px;
+}
+
+.footer-line {
+    width: 250px;
+    margin: 20px auto;
+    border: none;
+    border-top: 1px solid rgba(255,255,255,.25);
+}
+
+.footer-mini {
+    background: #f1eee8;
+    border-top: 1px solid #ddd2c0;
+    color: #666;
+    text-align: center;
+    padding: 15px;
+    font-size: .85rem;
+    margin-top: 30px;
 }
 
 /* WHATSAPP */
